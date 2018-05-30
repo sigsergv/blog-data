@@ -1,0 +1,7 @@
+#!/bin/bash
+cp /etc/letsencrypt/live/jabber.regolit.com/privkey.pem /etc/prosody/certs/jabber.regolit.key
+cp /etc/letsencrypt/live/jabber.regolit.com/fullchain.pem /etc/prosody/certs/jabber.regolit.pem
+chown prosody:prosody /etc/prosody/certs/jabber.regolit.{key,pem}
+chmod 0600 /etc/prosody/certs/jabber.regolit.{key,pem}
+/bin/systemctl reload prosody  # since version 0.10 it will reload certificates
+/bin/systemctl reload nginx
