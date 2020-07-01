@@ -4,6 +4,6 @@ cp /etc/letsencrypt/live/jabber.regolit.com/fullchain.pem /etc/prosody/certs/jab
 chown prosody:prosody /etc/prosody/certs/jabber.regolit.{key,pem}
 chmod 0600 /etc/prosody/certs/jabber.regolit.{key,pem}
 cat /etc/letsencrypt/live/regolit.com-0001/privkey.pem > /etc/exim4/regolit.com.key
-cat /etc/letsencrypt/live/regolit.com-0001/fullchain.pem > regolit.com.pem
+cat /etc/letsencrypt/live/regolit.com-0001/fullchain.pem > /etc/exim4/regolit.com.pem
 /bin/systemctl reload prosody  # since version 0.10 it will reload certificates
 /bin/systemctl reload nginx
