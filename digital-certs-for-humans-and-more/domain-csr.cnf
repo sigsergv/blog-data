@@ -8,7 +8,7 @@ C = RU
 ST = NSO
 L = Novosibirsk
 O = Regolit
-CN = regolit.com
+CN = test.regolit.com
 emailAddress = sergei@regolit.com
 
 [ req_attributes ]
