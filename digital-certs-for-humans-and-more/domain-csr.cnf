@@ -1,0 +1,15 @@
+[ req ]
+prompt = no
+distinguished_name = req_distinguished_name
+attributes = req_attributes
+
+[ req_distinguished_name ]
+C = RU
+ST = NSO
+L = Novosibirsk
+O = Regolit
+CN = regolit.com
+emailAddress = sergei@regolit.com
+
+[ req_attributes ]
+challengePassword = 123456
