@@ -1,0 +1,4 @@
+[cert_ext]
+basicConstraints = CA:false
+subjectAltName = DNS:regolit.com, DNS:www.regolit.com
+keyUsage = digitalSignature
