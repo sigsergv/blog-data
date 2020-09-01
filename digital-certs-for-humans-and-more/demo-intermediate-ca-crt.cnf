@@ -1,0 +1,5 @@
+[cert_ext]
+authorityKeyIdentifier = keyid
+subjectKeyIdentifier = hash
+basicConstraints = critical, CA:true
+keyUsage = digitalSignature, keyCertSign
