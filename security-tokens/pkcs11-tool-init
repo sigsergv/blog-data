@@ -1,0 +1,19 @@
+# this shell initialization file contains some useful aliases
+# to make them available issue this command: `source pkcs11-tool-init`
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+	alias pkcs11-tool-softhsm="pkcs11-tool --module /usr/lib/softhsm/libsofthsm2.so"
+	alias pkcs11-tool-etoken="pkcs11-tool --module /usr/local/lib/libeToken.dylib"
+	alias pkcs11-tool-rutoken="pkcs11-tool --module /opt/aktivco/rutokenecp/amd64/librtpkcs11ecp.so"
+	alias pkcs11-tool-jacarta="pkcs11-tool --module /usr/lib/libjcPKCS11-2.so"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+	alias pkcs11-tool-softhsm="pkcs11-tool --module /usr/local/Cellar/softhsm/2.6.1/lib/softhsm/libsofthsm2.so"
+	alias pkcs11-tool-etoken="DYLD_LIBRARY_PATH=/usr/local/opt/openssl/lib pkcs11-tool --module /usr/local/lib/libeToken.dylib"
+	alias pkcs11-tool-rutoken="pkcs11-tool --module /usr/local/lib/librtpkcs11ecp.dylib"
+	alias pkcs11-tool-jacarta="pkcs11-tool --module /Applications/JaCartaUC.app/Contents/MacOS/jcPKCS11-2"
+fi
+
+echo "Now these aliases are available:"
+echo "  pkcs11-tool-softhsm"
+echo "  pkcs11-tool-etoken"
+echo "  pkcs11-tool-rutoken"
+echo "  pkcs11-tool-jacarta"
