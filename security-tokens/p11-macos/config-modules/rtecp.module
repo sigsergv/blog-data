@@ -1,0 +1,2 @@
+## you need to install PKCS#11 library from https://www.rutoken.ru/support/download/pkcs/
+module:/usr/local/lib/librtpkcs11ecp.dylib
